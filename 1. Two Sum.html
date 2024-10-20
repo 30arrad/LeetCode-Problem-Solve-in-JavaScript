@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Two Sum</title>
+</head>
+<body>
+
+    <main>
+        <p>
+            Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+             <br>
+            You may assume that each input would have exactly one solution, and you may not use the same element twice.
+              <br>
+            You can return the answer in any order.
+        </p>
+        <p>
+            Example 2: <br>
+            Input: nums = [3,2,4], <br>
+            target = 6 <br>
+            Output: [1,2]
+        </p>
+    </main>
+
+    <script>
+        console.log("Two Sum")
+     /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     */
+     nums = [3,2,4];
+     target = 6;
+
+    var twoSum = function(nums, target) {  
+        
+         let mp = new Map();
+         for(let i=0;i<nums.length;i++) 
+         {
+            let rem = target-nums[i];
+            if(mp.has(rem))
+         {
+            return [mp.get(rem),i]
+         }
+         }
+    };
+    console.log();
+    </script>
+</body>
+</html>
